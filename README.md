@@ -31,3 +31,6 @@ module.exports = {
 * `zip -r app.zip .`
 *  Upload `app.zip` to your NodeJS 14.x Lambda and test
 
+## TODO
+
+* Find out if first invocation time can be decreased (it's now very slow)
