@@ -2,7 +2,9 @@
 
 [NPM package](https://www.npmjs.com/package/nbb-lambda-adapter) to enable running Clojurescript code on AWS Lambda NodeJS runtime using [nbb](https://github.com/babashka/nbb).
 
-This approach is compatible with all existing tooling for `node`. Use CDK, SAM, Serverless or whatever build/deployment tool.
+Major benefit with this library is rapid Lambda development directly in the Lambda Console. There's no need to compile CLJS to JS so the feedback loop is very quick.
+
+This approach is also compatible with all existing tooling for `node`. Use CDK, SAM, Serverless or whatever build/deployment tool.
 
 ## index.js
 
@@ -38,6 +40,6 @@ module.exports = {
 
 ## Tips & tricks
 
-* nbb loads slowly with 128MB of memory. Increase the timeout or add more memory. Startup will speed up significantly when more memory is added
+* nbb loads slowly with 128MB of memory. Increase the timeout or add more memory. Startup will speed up significantly when more memory is added because Lambda gets also more CPU power with the extra memory.
 * ARM64 architecture provides cost and speed benefits over x86
 * `aws-sdk` is available on the NodeJS runtime and it can be required `(require '["aws-sdk" :as AWS])`
