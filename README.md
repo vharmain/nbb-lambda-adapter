@@ -34,3 +34,4 @@ module.exports = {
 ## TODO
 
 * Find out if first invocation time can be decreased (it's now very slow)
+* Figure out less brittle way to import `nbb`
