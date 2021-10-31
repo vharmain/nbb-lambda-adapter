@@ -10,7 +10,7 @@ async function resolveHandler(
     return handlers[key];
   }
 
-  let { loadFile } = await import("./node_modules/nbb/out/nbb_api.js");
+  let { loadFile } = await import("../nbb/out/nbb_api.js");
   let deps = await loadFile(filePath);
 
   if (!deps[handlerName]) {
