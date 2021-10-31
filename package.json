@@ -1,6 +1,6 @@
 {
   "name": "nbb-lambda-adapter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NPM package to enable running Clojurescript code on AWS Lambda NodeJS runtime",
   "main": "index.js",
   "scripts": {
