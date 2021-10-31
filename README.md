@@ -31,3 +31,8 @@ module.exports = {
 * `zip -r app.zip .`
 *  Upload `app.zip` to your NodeJS 14.x Lambda and test
 
+## Tips & tricks
+
+* nbb loads slowly with 128MB of memory. Increase the timeout or add more memory. Startup will speed up significantly when more memory is added
+* ARM64 architecture provides cost and speed benefits over x86
+* `aws-sdk` is available on the NodeJS runtime and it can be required `(require '["aws-sdk" :as AWS])`
