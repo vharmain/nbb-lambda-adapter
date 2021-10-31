@@ -1,6 +1,8 @@
 # nbb-lambda-adapter
 NPM package to enable running Clojurescript code on AWS Lambda NodeJS runtime
 
+This approach is compatible with all existing tooling for `node`. Use CDK, SAM, Serverless or whatever build/deployment tool.
+
 ## index.js
 
 ```javascript
@@ -25,6 +27,7 @@ module.exports = {
 
 ## Setup
 
+* `npm init`
 * `npm install --save nbb-lambda-adapter`
 * Create index.js according to example above
 * Create demo.cljs according to example above
