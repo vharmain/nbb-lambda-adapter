@@ -43,3 +43,20 @@ module.exports = {
 * nbb loads slowly with 128MB of memory. Increase the timeout or add more memory. Startup will speed up significantly when more memory is added because Lambda gets also more CPU power with the extra memory.
 * ARM64 architecture provides cost and speed benefits over x86
 * `aws-sdk` is available on the NodeJS runtime and it can be required `(require '["aws-sdk" :as AWS])`
+
+## AWS SDK example
+
+```clojure
+(ns example
+    (:require ["aws-sdk$default" :as AWS]))
+
+(def s3-client (AWS/S3.))
+
+(defn handler [event _ctx]
+  (-> s3-client
+      (.listObjects #js{:Bucket "nbb-adapter-test"})
+      .promise
+      (.then js/console.log)))
+
+#js {:myHandler handler}
+```
