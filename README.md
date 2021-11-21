@@ -25,6 +25,7 @@ module.exports = {
   (js/console.log event)
   (js/Promise.resolve #js{:hello "world"}))
 
+;; Exports
 #js {:handler handler}
 ```
 
@@ -58,5 +59,6 @@ module.exports = {
       .promise
       (.then js/console.log)))
 
+;; Exports
 #js {:myHandler handler}
 ```
