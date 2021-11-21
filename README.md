@@ -60,5 +60,5 @@ module.exports = {
       (.then js/console.log)))
 
 ;; Exports
-#js {:myHandler handler}
+#js {:handler handler}
 ```
