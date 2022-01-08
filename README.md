@@ -1,3 +1,21 @@
+# THIS MODULE IS NO MORE NECESSARY
+
+As of 6.1.2022 AWS Lambda [NodeJS 14.x Runtime supports top-level await for es-modules](https://aws.amazon.com/about-aws/whats-new/2022/01/aws-lambda-es-modules-top-level-await-node-js-14/). It's now possible to just let `nbb` to load cljs code on the top-level without the adapter.
+
+## Example `index.mjs`
+
+```
+import { loadFile } from 'nbb';
+
+const { handler } = await loadFile('./example.cljs');
+
+export { handler }
+```
+
+----------------------
+
+# Old README
+
 # nbb-lambda-adapter
 
 [NPM package](https://www.npmjs.com/package/nbb-lambda-adapter) to enable running Clojurescript code on AWS Lambda NodeJS runtime using [nbb](https://github.com/babashka/nbb).
