@@ -12,6 +12,8 @@ const { handler } = await loadFile('./example.cljs');
 export { handler }
 ```
 
+See also https://github.com/vharmain/nbb-serverless-example
+
 ----------------------
 
 # Old README
